@@ -65,7 +65,7 @@ const FullScreenGifViewComponent = ({
     dispatch(deleteGifo(gifData));
   };
 
-  if (!showModal || !gifData?.images?.original?.url) return null;
+  if (!showModal || !gifData?.images?.downsized_medium?.url) return null;
 
   return showModal ? (
     <div className="fixed w-full h-full flex items-center justify-center z-50 ">
@@ -79,7 +79,7 @@ const FullScreenGifViewComponent = ({
             </button>
           </div>
           <Image
-            src={gifData.images.original.url}
+            src={gifData.images.downsized_medium.url}
             alt={gifData.alt_text}
             width={720}
             height={600}
