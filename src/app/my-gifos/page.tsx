@@ -1,16 +1,16 @@
 //Components
 import FooterComponent from "@/components/FooterComponent/FooterComponent";
 import FullScreenGifViewComponent from "@/components/FullScreenGifViewComponent/FullScreenGifViewComponent";
+import MyGifosSectionComponent from "@/components/MyGifosSectionComponent/MyGifosSectionComponent";
 import NavbarComponent from "@/components/NavbarComponent/NavbarComponent";
-import SearchSectionComponent from "@/components/SearchSectionComponent/SearchSectionComponent";
 import TrendSectionComponent from "@/components/TrendSectionComponent/TrendSectionComponent";
 
 const page = () => {
   return (
     <>
-      <FullScreenGifViewComponent />
+      <FullScreenGifViewComponent mode="my-gifos" />
       <NavbarComponent />
-      <SearchSectionComponent />
+      <MyGifosSectionComponent />
       <TrendSectionComponent />
       <FooterComponent />
     </>

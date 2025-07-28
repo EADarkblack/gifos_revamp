@@ -1,16 +1,16 @@
 //Components
+import FavoriteSectionComponent from "@/components/FavoriteSectionComponent/FavoriteSectionComponent";
 import FooterComponent from "@/components/FooterComponent/FooterComponent";
 import FullScreenGifViewComponent from "@/components/FullScreenGifViewComponent/FullScreenGifViewComponent";
 import NavbarComponent from "@/components/NavbarComponent/NavbarComponent";
-import SearchSectionComponent from "@/components/SearchSectionComponent/SearchSectionComponent";
 import TrendSectionComponent from "@/components/TrendSectionComponent/TrendSectionComponent";
 
 const page = () => {
   return (
     <>
-      <FullScreenGifViewComponent />
+      <FullScreenGifViewComponent mode="favorites" />
       <NavbarComponent />
-      <SearchSectionComponent />
+      <FavoriteSectionComponent />
       <TrendSectionComponent />
       <FooterComponent />
     </>
