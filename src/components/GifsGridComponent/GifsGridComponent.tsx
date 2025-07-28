@@ -39,7 +39,16 @@ const GifsGridComponent = ({ searchTerm, mode }: GifsGridComponentProps) => {
   useEffect(() => {
     setOffset(0);
     setAllGif([]);
-  }, [searchTerm, mode, favorites]);
+  }, [searchTerm, mode]);
+
+  useEffect(() => {
+    if (mode === "favorites") {
+      setOffset(0);
+      const favoriteSlice = favorites.slice(0, 16);
+      setAllGif(favoriteSlice);
+      setHasMore(favorites.length > 16);
+    }
+  }, [favorites, mode]);
 
   useEffect(() => {
     if (mode === "my-gifos") {
@@ -48,14 +57,7 @@ const GifsGridComponent = ({ searchTerm, mode }: GifsGridComponentProps) => {
       setAllGif(myGifosSlice);
       setHasMore(myGifos.length > 16);
     }
-
-    if (mode === "favorites") {
-      setOffset(0);
-      const favoriteSlice = favorites.slice(0, 16);
-      setAllGif(favoriteSlice);
-      setHasMore(favorites.length > 16);
-    }
-  }, [myGifos, favorites, mode]);
+  }, [myGifos, mode]);
 
   useEffect(() => {
     if (mode === "search" && data?.data && offset === 0) {
