@@ -84,6 +84,7 @@ const FullScreenGifViewComponent = ({
             width={720}
             height={600}
             className="w-full max-h-[600px] object-contain"
+            unoptimized
           />
           <div className=" w-full flex justify-between items-center gap-4">
             <div
