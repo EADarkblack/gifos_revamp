@@ -8,7 +8,7 @@ import TrendSectionComponent from "@/components/TrendSectionComponent/TrendSecti
 const page = () => {
   return (
     <>
-      <FullScreenGifViewComponent mode="search" />
+      <FullScreenGifViewComponent mode="favorites" />
       <NavbarComponent />
       <SearchSectionComponent />
       <TrendSectionComponent />
